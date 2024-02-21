@@ -385,7 +385,7 @@ hr {
     position: absolute;
     background-color: #d3ad7f;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -545,3 +545,32 @@ hr {
     }
 }
 
+
+#acercade {
+    .container-clientes {
+        display: flex;
+        justify-content: space-evenly;
+
+        align-items: center;
+        text-align: center;
+        padding-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .star a.star-outline::before,
+    .star a.star-half-outline::before {
+        content: "\2605";
+        font-size: 20px;
+        color: gold;
+        margin-right: 5px;
+    }
+
+    .star a.star-half-outline::before {
+        content: "\00BD";
+        font-size: 10px;
+        position: relative;
+        top: -2px;
+    }
+
+
+}
