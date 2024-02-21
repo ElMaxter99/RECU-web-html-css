@@ -27,20 +27,23 @@ html::-webkit-scrollbar-thumb {
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
+    border: solid 1px;
 }
 
 body {
-    background-color: #000;
+    background-color: #111;
 }
 
 header {
     background-color: #d3ad7f;
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
     padding-top: 1.5rem;
     align-items: center;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
 }
 
 .logo img {
@@ -66,14 +69,14 @@ ul li a {
 }
 
 .C-icone {
-    margin-right:  5rem;
+    margin-right: 5rem;
 }
 
 ul li a:hover {
     text-transform: capitalize;
     color: rgb(101, 110, 3);
     border-bottom: solid 1px;
-} 
+}
 
 hr {
     border-bottom: solid 0.1px;
@@ -87,8 +90,10 @@ hr {
 }
 
 .C-title h1 {
+    -webkit-text-stroke: 2px black;
+    /* Para navegadores WebKit como Chrome y Safari */
     color: #fff;
-    font-size: 4.8rem;
+    font-size: 3.8rem;
 }
 
 .C-title p span {
@@ -98,7 +103,7 @@ hr {
     border-top: 1px solid black;
     line-height: 2rem;
     font-size: 1.2rem;
-    font-weight: 100; 
+    font-weight: 100;
 }
 
 .C-title button {
@@ -124,17 +129,17 @@ hr {
 
 .section-1 span {
     color: #d3ad7f;
-} 
+}
 
 .section-1 a {
     color: #d3ad7f;
-} 
-
-.section-1 {
-    padding: 5rem; 
 }
 
-.about{
+.section-1 {
+    padding: 5rem;
+}
+
+.about {
     display: flex;
     align-items: center;
     background-color: #13131a;
@@ -273,7 +278,7 @@ hr {
     padding-top: 2rem;
     flex-wrap: wrap;
     margin-bottom: 2rem;
-    }
+}
 
 .cards {
     border: solid 1px rgba(255, 255, 255, .3);
@@ -286,12 +291,12 @@ hr {
     margin-top: 2rem;
 }
 
-.icones > a {
+.icones>a {
     color: #fff;
     font-size: 1rem;
-    border: solid 1px  #ccc;
+    border: solid 1px #ccc;
     padding: 0.8rem;
-    
+
 }
 
 .icones a:hover {
@@ -308,7 +313,7 @@ hr {
 
 .price {
     color: #fff;
-    
+
 }
 
 .price span {
@@ -326,7 +331,7 @@ hr {
     color: #fff;
     font-size: 3rem;
     margin-top: 3rem;
-    
+
 }
 
 .section-4 span {
@@ -336,7 +341,7 @@ hr {
 .container-clientes {
     display: flex;
     justify-content: space-evenly;
-  
+
     align-items: center;
     text-align: center;
     padding-top: 3rem;
@@ -359,7 +364,7 @@ hr {
     color: #ccc;
     line-height: 2rem;
     margin-top: 1rem;
-    
+
 }
 
 .paragrafo h4 {
@@ -368,3 +373,144 @@ hr {
     font-size: 2rem;
 
 }
+
+#price {
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .price-comparison {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .price-column {
+        background-color: #d3ad7f;
+        box-shadow: 0 7px 30px rgba(52, 31, 97, 0.1);
+        padding: 2rem;
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 275px;
+        border-radius: 8px;
+    }
+
+    .price-column.popular {
+        position: relative;
+        background-color: brown;
+        box-shadow: 0 7px 30px rgba(52, 13, 135, 0.3);
+        margin-top: -1.5rem;
+        padding-top: 3.5rem;
+        margin-bottom: -1.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .price-column:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .price-column:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .price-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .price {
+        font-size: 3.5rem;
+        display: flex;
+    }
+
+    .dollar-sign {
+        font-size: 1.5rem;
+        margin-top: .5rem;
+        margin-right: .25rem;
+    }
+
+    .per-month {
+        font-size: .75rem;
+        align-self: flex-end;
+        margin-bottom: 1.1rem;
+        text-transform: uppercase;
+    }
+
+    .plan-name {
+        text-transform: uppercase;
+        font-size: .9rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .divider {
+        height: 1px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .2);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .price-column.popular .divider {
+        background-color: white
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        margin: .5rem;
+    }
+
+    .feature img {
+        height: 1.1em;
+        width: 1.1em;
+        margin-right: .5rem;
+    }
+
+    .feature.inactive {
+        color: #999;
+        text-decoration-line: line-through;
+    }
+
+    .most-popular {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+        right: .5rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .cta {
+        border: none;
+        color: black;
+        width: 100%;
+        padding: .75rem 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-top: 3rem;
+        transition: 100ms;
+        transform: scale(1);
+    }
+
+    .price-column.popular .cta {
+        background-color: white;
+    }
+
+    .cta:hover,
+    .cta:focus {
+        transform: scale(1.1);
+    }
+}
+
