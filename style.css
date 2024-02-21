@@ -325,23 +325,9 @@ hr {
     font-size: 1.5rem;
 }
 
-.section-4 h1 {
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    font-size: 3rem;
-    margin-top: 3rem;
-
-}
-
-.section-4 span {
-    color: #d3ad7f;
-}
-
 .container-clientes {
     display: flex;
     justify-content: space-evenly;
-
     align-items: center;
     text-align: center;
     padding-top: 3rem;
@@ -403,7 +389,6 @@ hr {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 
 #price {
     margin: 0;
@@ -545,7 +530,6 @@ hr {
     }
 }
 
-
 #acercade {
     .container-clientes {
         display: flex;
@@ -572,5 +556,7 @@ hr {
         top: -2px;
     }
 
-
+    .section-4 {
+        padding-top:150px;
+    }
 }
