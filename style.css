@@ -46,7 +46,6 @@ header {
     align-items: center;
     width: 100%;
     z-index: 100;
-    position: fixed;
 }
 
 .logo img {
@@ -393,22 +392,28 @@ hr {
     display: block;
 }
 
+.price-video {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 1rem;
+    padding: 125px;
+}
+
+.price-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    margin: 1rem;
+}
+
 #price {
     margin: 0;
-    min-width: 100vw;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .price-comparison {
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        width: 100%;
-        margin: 1rem;
-    }
-
+    padding-bottom: 150px;
     .price-column {
         background-color: #d3ad7f;
         box-shadow: 0 7px 30px rgba(52, 31, 97, 0.1);
