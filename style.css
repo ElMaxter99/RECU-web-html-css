@@ -397,7 +397,8 @@ hr {
     justify-content: center;
     align-items: stretch;
     margin: 1rem;
-    padding: 125px;
+    padding-bottom: 125px;
+    padding-top: 50px;
 }
 
 .price-comparison {
